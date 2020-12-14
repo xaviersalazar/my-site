@@ -1,9 +1,24 @@
-@import "~react-bulma-components/src/index.sass";
-
+html,
 body {
   background: #0e1212;
   margin: 0;
-  padding: 0;
+  padding: 16px;
   height: 100%;
   width: 100%;
+  font-family: "Montserrat", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+}
+
+p,
+span,
+a {
+  font-weight: 400;
 }

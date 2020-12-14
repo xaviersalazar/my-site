@@ -6,7 +6,7 @@ export const App = () => (
     <Particles
       id="tsparticles"
       height="100vh"
-      width="100vw"
+      width="100%"
       options={{
         background: {
           color: {

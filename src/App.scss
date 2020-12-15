@@ -8,11 +8,30 @@
   text-align: center;
 
   .nav-item {
+    position: relative;
     display: flex;
     flex-direction: column;
     flex-basis: 100%;
     flex: 1;
+    font-weight: 700;
     color: $primary;
+    text-decoration: none;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(
+      to right,
+      #ffffff,
+      #ffffff 50%,
+      $primary 50%
+    );
+    background-size: 200% 100%;
+    background-position: 100%;
+
+    &:hover {
+      transition: all 2s cubic-bezier(0, 0, 0.23, 1.5);
+      background-position: 0%;
+    }
   }
 }
 

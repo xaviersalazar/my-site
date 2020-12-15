@@ -1,0 +1,31 @@
+@import "../../_variables.sass";
+@import "~bulma/sass/utilities/_all.sass";
+
+.main-background {
+  width: 100vw;
+  height: 100vh;
+  padding: 0 !important;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-self: start;
+}
+
+.name {
+  font-size: 64px;
+  color: $primary;
+  font-weight: 900;
+  line-height: 4rem;
+
+  @include desktop {
+    font-size: 72px;
+    line-height: 4.5rem;
+  }
+
+  @include widescreen {
+    font-size: 88px;
+    line-height: 5rem;
+  }
+}

@@ -1,2 +1,14 @@
 @import "./_variables.sass";
 @import "~react-bulma-components/src/index.sass";
+
+.main {
+  padding: 16px;
+
+  @include desktop {
+    padding: 24px;
+  }
+
+  @include widescreen {
+    padding: 32px;
+  }
+}

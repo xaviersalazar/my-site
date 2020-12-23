@@ -26,7 +26,6 @@ export const About = () => {
 
   const determineWidth = () => {
     if (windowWidth >= 320 && windowWidth < 768) {
-      console.log("here");
       return "25%";
     } else if (windowWidth >= 768 && windowWidth < 1024) {
       console.log("here");
@@ -48,8 +47,21 @@ export const About = () => {
           className="animated-hr"
           ref={ref}
           animate={{ width: inView ? determineWidth() : "0%" }}
-          transition={{ duration: 3 }}
+          transition={{ duration: 2 }}
         />
+      </div>
+      <div className="about-me column is-full has-text-centered">
+        <motion.p
+          ref={ref}
+          initial={{ y: 100, opacity: 0 }}
+          animate={{ y: inView ? 0 : 100, opacity: inView ? 1 : 0 }}
+          transition={{ bounce: "bounceIn", duration: 0.5 }}
+        >
+          i've been a front-end developer since 2013 and have since joined the
+          U.S. Army, attended a coding boot-camp, pursued (and still pursuing)
+          my computer science degree, and am now currently a senior software
+          developer
+        </motion.p>
       </div>
     </Container>
   );

@@ -8,6 +8,8 @@ export const App = () => (
   <>
     <Nav />
     <Landing />
-    <About />
+    <div className="main">
+      <About />
+    </div>
   </>
 );

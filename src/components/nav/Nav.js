@@ -5,7 +5,7 @@ import "./Nav.scss";
 
 const navItems = [
   {
-    title: "about me",
+    title: "about",
     link: "#",
   },
   {
@@ -13,7 +13,7 @@ const navItems = [
     link: "#",
   },
   {
-    title: "contact me",
+    title: "contact",
     link: "#",
   },
 ];
@@ -21,7 +21,7 @@ const navItems = [
 export const Nav = () => (
   <Container className="nav">
     {navItems.map((item) => (
-      <NavItem title={item.title} link={item.link} />
+      <NavItem key={item.title} title={item.title} link={item.link} />
     ))}
   </Container>
 );

@@ -4,19 +4,15 @@ import Particles from "react-tsparticles";
 export const ParticlesBackground = () => (
   <Particles
     id="tsparticles"
-    height="100vh"
+    height="100%"
     width="100%"
     style={{
       position: "absolute",
       top: 0,
       left: 0,
+      background: "#ffffff",
     }}
     options={{
-      background: {
-        color: {
-          value: "#0e1212",
-        },
-      },
       fpsLimit: 60,
       interactivity: {
         detectsOn: "canvas",
@@ -49,10 +45,10 @@ export const ParticlesBackground = () => (
       },
       particles: {
         color: {
-          value: "#ffffff",
+          value: "#030301",
         },
         links: {
-          color: "#ffffff",
+          color: "#030301",
           distance: 150,
           enable: true,
           opacity: 0.25,

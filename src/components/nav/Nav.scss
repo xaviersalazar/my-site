@@ -6,6 +6,10 @@
   flex-direction: row;
   width: 100%;
   text-align: center;
+  background: $primary;
+  margin: 0;
+  max-width: 100%;
+  padding: 16px;
 
   .nav-item {
     position: relative;
@@ -14,16 +18,16 @@
     flex-basis: 100%;
     flex: 1;
     font-weight: 700;
-    color: $primary;
+    color: #ffffff;
     text-decoration: none;
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-image: linear-gradient(
       to right,
-      #ffffff,
+      $primary,
       #ffffff 50%,
-      $primary 50%
+      #ffffff 50%
     );
     background-size: 200% 100%;
     background-position: 100%;

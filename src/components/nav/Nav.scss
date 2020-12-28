@@ -1,10 +1,8 @@
-@import "../../_variables.sass";
-@import "~react-bulma-components/src/index.sass";
+@import "../../variables.scss";
 
 #nav {
   display: flex;
   flex-direction: row;
-  width: 100%;
   text-align: center;
   background: $primary;
   margin: 0;
@@ -19,5 +17,6 @@
     flex: 1;
     font-weight: 700;
     color: #ffffff;
+    text-decoration: none;
   }
 }

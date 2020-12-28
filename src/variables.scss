@@ -1,0 +1,39 @@
+// colors
+$primary: #141414;
+$secondary: #ff4365;
+
+// breakpoints
+$phone: 576px;
+$tablet: 768px;
+$desktop: 992px;
+$desktop-lg: 1200px;
+$desktop-xl: 1400px;
+
+@mixin phone {
+  @media (min-width: #{$phone}) and (max-width: #{$tablet - 1px}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$tablet}) and (max-width: #{$desktop - 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop}) and (max-width: #{$desktop-lg - 1px}) {
+    @content;
+  }
+}
+
+@mixin desktopLg {
+  @media (min-width: #{$desktop-lg}) and (max-width: #{$desktop-xl - 1px}) {
+    @content;
+  }
+}
+@mixin desktopXl {
+  @media (min-width: #{$desktop-xl}) {
+    @content;
+  }
+}

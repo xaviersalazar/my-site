@@ -1,5 +1,4 @@
-@import "./_variables.sass";
-@import "~react-bulma-components/src/index.sass";
+@import "./variables.scss";
 
 .main {
   padding: 16px;
@@ -8,7 +7,11 @@
     padding: 24px;
   }
 
-  @include widescreen {
+  @include desktopLg {
+    padding: 28px;
+  }
+
+  @include desktopXl {
     padding: 32px;
   }
 }

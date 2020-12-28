@@ -1,5 +1,4 @@
-@import "../../_variables.sass";
-@import "~bulma/sass/utilities/_all.sass";
+@import "../../variables.scss";
 
 .main-background {
   height: 100vh;
@@ -27,7 +26,7 @@
     line-height: 4.5rem;
   }
 
-  @include widescreen {
+  @include desktopXl {
     font-size: 5rem;
     line-height: 5rem;
   }

@@ -1,5 +1,4 @@
-@import "../../_variables.sass";
-@import "~react-bulma-components/src/index.sass";
+@import "../../variables.scss";
 
 .text-centered {
   text-align: center;
@@ -19,7 +18,7 @@
   width: 0%;
   margin: 0 auto;
   height: 12px;
-  background: $red;
+  background: $secondary;
 }
 
 .about-me {
@@ -40,7 +39,7 @@
     height: 55px;
   }
 
-  @include widescreen {
+  @include desktopXl {
     height: 60px;
   }
 }

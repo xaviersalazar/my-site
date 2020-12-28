@@ -1,4 +1,4 @@
-@import "~react-bulma-components/src/index.sass";
+@import "./variables.scss";
 
 html,
 body {
@@ -45,7 +45,11 @@ a {
     width: 65%;
   }
 
-  @include widescreen {
+  @include desktopLg {
+    width: 55%;
+  }
+
+  @include desktopXl {
     width: 50%;
   }
 }

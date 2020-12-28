@@ -41,7 +41,7 @@ export const About = () => {
 
   return (
     <div id="about">
-      <div className="header">
+      <div className="text-center">
         <h1 className="title">about</h1>
         <motion.hr
           className="animated-hr"
@@ -58,10 +58,10 @@ export const About = () => {
           transition={{ bounce: "bounceIn", duration: 0.5 }}
           className="about-me-summary"
         >
-          i've been a front-end developer since 2013 and have since joined the
-          U.S. Army, attended a coding boot-camp, pursued (and still pursuing)
-          my computer science degree, and am now currently a senior software
-          developer
+          i enjoy all things programming, especially the front-end, and i've
+          been a developer since 2013. i've since joined the U.S. Army, attended
+          a coding boot-camp, pursued (and still pursuing) my computer science
+          degree, and am now currently a senior software developer
         </motion.p>
       </div>
       <Skills />

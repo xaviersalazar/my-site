@@ -1,5 +1,4 @@
 import React from "react";
-import Container from "react-bulma-components/lib/components/container";
 import { NavItem } from "./NavItem";
 import "./Nav.scss";
 

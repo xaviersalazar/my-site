@@ -1,11 +1,7 @@
 import React, { useEffect, useState } from "react";
-import Container from "react-bulma-components/lib/components/container";
 import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
-import { ReactComponent as JavascriptSvg } from "../../svg/javascript.svg";
-import { ReactComponent as ReactSvg } from "../../svg/react.svg";
-import { ReactComponent as AngularSvg } from "../../svg/angular.svg";
-import { ReactComponent as TypescriptSvg } from "../../svg/typescript.svg";
+import { Skills } from "./Skills";
 import "./About.scss";
 
 export const About = () => {
@@ -54,7 +50,7 @@ export const About = () => {
           transition={{ duration: 2 }}
         />
       </div>
-      <div className="about-me has-text-centered">
+      <div className="about-me text-center">
         <motion.p
           ref={ref}
           initial={{ y: 100, opacity: 0 }}
@@ -67,20 +63,7 @@ export const About = () => {
           developer
         </motion.p>
       </div>
-      <div className="columns is-mobile icons">
-        <div className="column has-text-centered">
-          <JavascriptSvg className="icon-svg" />
-        </div>
-        <div className="column has-text-centered">
-          <ReactSvg className="icon-svg" />
-        </div>
-        <div className="column has-text-centered">
-          <AngularSvg className="icon-svg" />
-        </div>
-        <div className="column has-text-centered">
-          <TypescriptSvg className="icon-svg" />
-        </div>
-      </div>
+      <Skills />
     </div>
   );
 };

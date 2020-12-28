@@ -1,10 +1,13 @@
+@import "~react-bulma-components/src/index.sass";
+
 html,
 body {
   background: #ffffff;
   margin: 0;
   padding: 0;
   height: 100%;
-  width: 100%;
+  width: 100vw;
+  overflow-x: hidden;
   font-family: "Montserrat", sans-serif;
 }
 
@@ -21,4 +24,37 @@ p,
 span,
 a {
   font-weight: 400;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 0 auto;
+
+  @include tablet {
+    width: 75%;
+  }
+
+  @include desktop {
+    width: 65%;
+  }
+
+  @include widescreen {
+    width: 50%;
+  }
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+  align-items: center;
+  width: 25%;
 }

@@ -1,6 +1,10 @@
 @import "../../_variables.sass";
 @import "~react-bulma-components/src/index.sass";
 
+.text-centered {
+  text-align: center;
+}
+
 .header {
   text-align: center;
 }
@@ -20,6 +24,8 @@
 
 .about-me {
   padding: 1rem;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 .icons {

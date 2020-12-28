@@ -20,6 +20,7 @@
   color: #ffffff;
   font-weight: 900;
   line-height: 4rem;
+  margin: 0;
 
   @include desktop {
     font-size: 72px;
@@ -30,4 +31,9 @@
     font-size: 5rem;
     line-height: 5rem;
   }
+}
+
+.subtitle {
+  color: $light;
+  font-weight: 200;
 }

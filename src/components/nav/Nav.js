@@ -5,7 +5,7 @@ import "./Nav.scss";
 const navItems = [
   {
     title: "about",
-    link: "#",
+    link: "#about",
   },
   {
     title: "work",

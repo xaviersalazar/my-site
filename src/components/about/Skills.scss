@@ -1,0 +1,25 @@
+@import "../../variables.scss";
+
+.skills {
+  padding: 0 1rem;
+  height: 55px;
+}
+
+.skill {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  align-self: self-start;
+  padding: 0 0 0 1rem;
+  margin: 0;
+}
+
+.progress-bar {
+  height: 25px;
+  background: $secondary;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  align-self: flex-end;
+  width: 0%;
+}

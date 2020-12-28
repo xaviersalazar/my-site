@@ -29,13 +29,13 @@ export const About = () => {
       return "25%";
     } else if (windowWidth >= 768 && windowWidth < 1024) {
       console.log("here");
-      return "13%";
-    } else if (windowWidth >= 1024 && windowWidth < 1440) {
       return "11%";
+    } else if (windowWidth >= 1024 && windowWidth < 1440) {
+      return "10%";
     } else if (windowWidth >= 1440 && windowWidth < 2560) {
-      return "8%";
+      return "6%";
     } else if (windowWidth >= 2560) {
-      return "7%";
+      return "4%";
     }
   };
 
@@ -56,6 +56,7 @@ export const About = () => {
           initial={{ y: 100, opacity: 0 }}
           animate={{ y: inView ? 0 : 100, opacity: inView ? 1 : 0 }}
           transition={{ bounce: "bounceIn", duration: 0.5 }}
+          className="about-me-summary"
         >
           i've been a front-end developer since 2013 and have since joined the
           U.S. Army, attended a coding boot-camp, pursued (and still pursuing)

@@ -2,6 +2,10 @@ import React, { useEffect, useState } from "react";
 import Container from "react-bulma-components/lib/components/container";
 import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
+import { ReactComponent as JavascriptSvg } from "../../svg/javascript.svg";
+import { ReactComponent as ReactSvg } from "../../svg/react.svg";
+import { ReactComponent as AngularSvg } from "../../svg/angular.svg";
+import { ReactComponent as TypescriptSvg } from "../../svg/typescript.svg";
 import "./About.scss";
 
 export const About = () => {
@@ -40,8 +44,8 @@ export const About = () => {
   };
 
   return (
-    <Container className="columns" id="about">
-      <div className="header column is-full">
+    <div id="about">
+      <div className="header">
         <h1 className="title">about</h1>
         <motion.hr
           className="animated-hr"
@@ -50,7 +54,7 @@ export const About = () => {
           transition={{ duration: 2 }}
         />
       </div>
-      <div className="about-me column is-full has-text-centered">
+      <div className="about-me has-text-centered">
         <motion.p
           ref={ref}
           initial={{ y: 100, opacity: 0 }}
@@ -63,6 +67,20 @@ export const About = () => {
           developer
         </motion.p>
       </div>
-    </Container>
+      <div className="columns is-mobile icons">
+        <div className="column has-text-centered">
+          <JavascriptSvg className="icon-svg" />
+        </div>
+        <div className="column has-text-centered">
+          <ReactSvg className="icon-svg" />
+        </div>
+        <div className="column has-text-centered">
+          <AngularSvg className="icon-svg" />
+        </div>
+        <div className="column has-text-centered">
+          <TypescriptSvg className="icon-svg" />
+        </div>
+      </div>
+    </div>
   );
 };

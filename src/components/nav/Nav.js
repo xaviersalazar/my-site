@@ -19,9 +19,9 @@ const navItems = [
 ];
 
 export const Nav = () => (
-  <Container className="nav">
+  <div id="nav">
     {navItems.map((item) => (
       <NavItem key={item.title} title={item.title} link={item.link} />
     ))}
-  </Container>
+  </div>
 );

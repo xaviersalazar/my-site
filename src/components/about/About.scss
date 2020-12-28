@@ -1,4 +1,5 @@
 @import "../../_variables.sass";
+@import "~react-bulma-components/src/index.sass";
 
 .header {
   text-align: center;
@@ -6,6 +7,7 @@
 
 .title {
   font-size: 3rem;
+  margin-bottom: 8px !important;
   color: $primary;
 }
 
@@ -18,6 +20,23 @@
 
 .about-me {
   padding: 1rem;
+}
+
+.icons {
+  max-width: 768px;
+  margin: 0 auto !important;
+}
+
+.icon-svg {
+  height: 50px;
+
+  @include desktop {
+    height: 55px;
+  }
+
+  @include widescreen {
+    height: 60px;
+  }
 }
 
 #about {

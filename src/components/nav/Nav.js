@@ -9,11 +9,11 @@ const navItems = [
   },
   {
     title: "work",
-    link: "#",
+    link: "#work",
   },
   {
     title: "contact",
-    link: "#",
+    link: "mailto:salazar.xavier26@gmail.com",
   },
 ];
 

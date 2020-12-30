@@ -1,60 +1,132 @@
 import React from "react";
-import { useInView } from "react-intersection-observer";
-import { motion } from "framer-motion";
+import { Scroll, Frame } from "framer";
 import "./Timeline.scss";
 
-export const Timeline = () => {
-  const [ref, inView] = useInView({
-    triggerOnce: true,
-    rootMargin: "-100px 0px",
-  });
-
-  return (
-    <div id="timeline-content">
-      <ul className="timeline">
-        <motion.div
-          ref={ref}
-          initial={{ height: 0 }}
-          animate={{ height: inView ? "100%" : 0 }}
-          transition={{ duration: 25 }}
-          className="timeline-line"
-        />
-        <li className="event" data-date="Nov 2010">
-          <p>got a job as an it specialist</p>
-        </li>
-        <li className="event" data-date="June 2013">
-          <p>started freelance development (still doing it)</p>
-        </li>
-        <li className="event" data-date="Feb 2015">
-          <p>joined the U.S. Army</p>
-        </li>
-        <li className="event" data-date="May 2018">
-          <p>got out of the U.S. Army</p>
-        </li>
-        <li className="event" data-date="May 2018">
-          <p>started a full-stack boot-camp at Codeup</p>
-        </li>
-        <li className="event" data-date="Oct 2018">
-          <p>graduated from Codeup</p>
-        </li>
-        <li className="event" data-date="Oct 2018">
-          <p>got a job as a full-stack dev at Appddiction Studio</p>
-        </li>
-        <li className="event" data-date="Jan 2019">
-          <p>started pursuing a BS in Computer Science online</p>
-        </li>
-        <li className="event" data-date="Feb 2019">
-          <p>joined the Texas National Guard</p>
-        </li>
-        <li className="event" data-date="Dec 2019">
-          <p>left Apddiction Studio, got a job at USAA</p>
-        </li>
-        <li className="event" data-date="June 2020">
-          <p>
-            left USAA, got a job at ERP International as a senior software dev
-          </p>
-        </li>
-      </ul>
-    </div>
-  );
-};
+export const Timeline = () => (
+  <>
+    <div class="fade" />
+    <Scroll height={450} width={"100%"} className="framer-scroll">
+      <Frame size={"100%"} background="#ffffff">
+        <div className="timeline-container">
+          <div className="timeline">
+            <div id="timeline">
+              <div>
+                <section className="year">
+                  <h3>2010</h3>
+                  <section>
+                    <h4>November</h4>
+                    <ul>
+                      <li>
+                        got my first IT job as an IT Specialist for FutureTech
+                      </li>
+                    </ul>
+                  </section>
+                </section>
+                <section className="year">
+                  <h3>2013</h3>
+                  <section>
+                    <h4>June</h4>
+                    <ul>
+                      <li>
+                        started freelance development with Peace of Mind (still
+                        doing it)
+                      </li>
+                    </ul>
+                  </section>
+                </section>
+                <section className="year">
+                  <h3>2015</h3>
+                  <section>
+                    <h4>February</h4>
+                    <ul>
+                      <li>joined the U.S. Army</li>
+                    </ul>
+                  </section>
+                </section>
+                <section className="year">
+                  <h3>2018</h3>
+                  <section>
+                    <h4>May</h4>
+                    <ul>
+                      <li>got out of the U.S. Army, contract ended</li>
+                    </ul>
+                  </section>
+                  <section>
+                    <h4>May</h4>
+                    <ul>
+                      <li>
+                        started a full-stack development boot-camp at Codeup
+                      </li>
+                    </ul>
+                  </section>
+                  <section>
+                    <h4>October</h4>
+                    <ul>
+                      <li>graduated from Codeup</li>
+                    </ul>
+                  </section>
+                  <section>
+                    <h4>October</h4>
+                    <ul>
+                      <li>
+                        got a job as a full-stack developer at Appddiction
+                        Studio
+                      </li>
+                    </ul>
+                  </section>
+                </section>
+                <section className="year">
+                  <h3>2019</h3>
+                  <section>
+                    <h4>January</h4>
+                    <ul>
+                      <li>
+                        started pursuing a bachelor's in Computer Science online
+                      </li>
+                    </ul>
+                  </section>
+                  <section>
+                    <h4>February</h4>
+                    <ul>
+                      <li>joined the Texas National Guard</li>
+                    </ul>
+                  </section>
+                  <section>
+                    <h4>December</h4>
+                    <ul>
+                      <li>left Appddiction Studio</li>
+                    </ul>
+                  </section>
+                </section>
+                <section className="year">
+                  <h3>2020</h3>
+                  <section>
+                    <h4>January</h4>
+                    <ul>
+                      <li>got a job as a Software Engineer III at USAA</li>
+                    </ul>
+                  </section>
+                  <section>
+                    <h4>June</h4>
+                    <ul>
+                      <li>left USAA</li>
+                    </ul>
+                  </section>
+                  <section>
+                    <h4>July</h4>
+                    <ul>
+                      <li>
+                        got a job as a Senior Software Developer at ERP
+                        International
+                      </li>
+                    </ul>
+                  </section>
+                </section>
+              </div>
+            </div>
+          </div>
+        </div>
+      </Frame>
+    </Scroll>
+  </>
+);

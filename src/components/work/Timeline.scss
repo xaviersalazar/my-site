@@ -1,108 +1,166 @@
 @import "../../variables.scss";
 
-$spacing: 32px;
-$radius: 4px;
-$date: 120px;
-$dotborder: 4px;
-$dot: 11px;
-$line: 4px;
-
-.timeline-line {
-  width: $line;
-  background: $secondary;
-  position: absolute;
-  top: 0;
-  left: -$line;
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
 }
 
-.timeline {
-  width: 100%;
-  // border-left: $line solid $secondary;
-  margin: 48px auto;
-  letter-spacing: 0.5px;
-  position: relative;
-  font-size: 1em;
-  padding: $spacing;
-  list-style: none;
-  flex: 1;
+.framer-scroll {
+  margin-top: 1rem;
+}
 
-  .event {
-    padding-bottom: ($spacing * 0.5);
-    margin-bottom: $spacing;
-    position: relative;
-    width: 85px;
-
-    @include small {
-      width: 105px;
-    }
-
-    @include phone {
-      width: 125px;
-    }
-
-    @include tablet {
-      width: 135px;
-    }
-
-    @include desktop {
-      width: 135px;
-    }
-
-    @include desktopLg {
-      width: 145px;
-    }
-
-    @include desktopXl {
-      width: 155px;
-    }
-
-    @include desktopXXl {
-      width: 165px;
-    }
-
-    &:last-of-type {
-      padding-bottom: 0;
-      margin-bottom: 0;
-      border: none;
-    }
-
-    &:before,
-    &:after {
-      position: absolute;
-      display: block;
-      top: 0;
-    }
-
-    &:before {
-      left: ((($date * 0.6) + $spacing + $line + $dot + ($dotborder * 2)) * 1.5) *
-        -1;
-      color: $primary;
-      content: attr(data-date);
-      text-align: right;
-      font-weight: 100;
-      font-size: 0.9em;
-      min-width: $date;
-    }
-
-    &:after {
-      box-shadow: 0 0 0 $dotborder fade($secondary, 100%);
-      left: ($spacing + $line + ($dot * 0.35)) * -1;
-      background: $primary;
-      border-radius: 50%;
-      height: $dot;
-      width: $dot;
-      content: "";
-      top: 5px;
-    }
+.fade {
+  &:after {
+    content: "";
+    position: absolute;
+    top: 5rem;
+    left: 0rem;
+    height: 5rem;
+    display: block;
+    width: 100%;
+    z-index: 300;
+    background: -moz-linear-gradient(
+      top,
+      rgba(255, 255, 255, 1) 20%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    background: -webkit-linear-gradient(
+      top,
+      rgba(255, 255, 255, 1) 20%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 1) 20%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=0 ); /* IE6-9 */
   }
 }
 
-#timeline-content {
-  text-align: center;
-  position: absolute;
-  top: initial;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 0;
+.timeline-container {
+  display: flex;
+  flex: auto;
+  flex-direction: column;
+  max-height: 100%;
+}
+
+.timeline {
+  display: flex;
+  flex: auto;
+  padding: 0rem 1rem 0rem 1rem;
+  margin: 0 auto;
+}
+
+#timeline {
+  position: relative;
+  display: table;
   height: 100%;
+  margin: {
+    left: auto;
+    right: auto;
+    top: 3rem;
+  }
+
+  div {
+    &:after {
+      content: "";
+      width: 2px;
+      position: absolute;
+      top: 0.5rem;
+      bottom: 0rem;
+      left: 60px;
+      z-index: 1;
+      background: $secondary;
+    }
+  }
+
+  h3 {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 5rem;
+    color: $light;
+    margin: 0;
+
+    font: {
+      size: 1em;
+      weight: 400;
+    }
+
+    @media (min-width: 62em) {
+      font-size: 1.1em;
+    }
+  }
+
+  section.year {
+    position: relative;
+
+    section {
+      position: relative;
+      padding-bottom: 1.25em;
+      margin-bottom: 2.2em;
+
+      h4 {
+        position: absolute;
+        bottom: 0;
+
+        font: {
+          size: 0.9em;
+          weight: 400;
+        }
+
+        line-height: 1.2em;
+        margin: 0;
+        padding: 0 0 0 89px;
+        color: $light;
+
+        @media (min-width: 62em) {
+          font-size: 1em;
+        }
+      }
+
+      ul {
+        list-style-type: none;
+        padding: 0 0 0 75px;
+        margin: -1.35rem 0 1em;
+        max-width: 32rem;
+        font-size: 1em;
+
+        @media (min-width: 62em) {
+          font-size: 1.1em;
+          padding: 0 0 0 81px;
+        }
+
+        &:last-child {
+          margin: {
+            bottom: 0;
+          }
+        }
+
+        &:first-of-type:after {
+          content: "";
+          width: 10px;
+          height: 10px;
+          background: $primary;
+          border: 2px solid #ffffff;
+          @include border-radius(50%);
+          position: absolute;
+          left: 54px;
+          top: 3px;
+          z-index: 2;
+        }
+
+        li {
+          margin-left: 0.5rem;
+          font-weight: 200;
+
+          &:not(:first-child) {
+            margin-top: 0.5rem;
+          }
+        }
+      }
+    }
+  }
 }

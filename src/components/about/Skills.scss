@@ -3,6 +3,22 @@
 .skills {
   padding: 0 1rem;
   height: 55px;
+
+  @include tablet {
+    width: 75%;
+  }
+
+  @include desktop {
+    width: 65%;
+  }
+
+  @include desktopLg {
+    width: 55%;
+  }
+
+  @include desktopXl {
+    width: 50%;
+  }
 }
 
 .skill {

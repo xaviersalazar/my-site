@@ -25,6 +25,11 @@ const skills = [
     duration: 2.75,
   },
   {
+    skill: "sass, jquery, webpack",
+    percent: "75%",
+    duration: 3.5,
+  },
+  {
     skill: "sql, mongodb",
     percent: "75%",
     duration: 3,
@@ -35,13 +40,8 @@ const skills = [
     duration: 3.25,
   },
   {
-    skill: "sass, jquery, webpack",
-    percent: "60%",
-    duration: 3.5,
-  },
-  {
     skill: "kubernetes, docker, ruby",
-    percent: "50%",
+    percent: "65%",
     duration: 3.75,
   },
 ];

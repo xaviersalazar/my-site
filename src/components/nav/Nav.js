@@ -13,7 +13,7 @@ const navItems = [
   },
   {
     title: "contact",
-    link: "mailto:salazar.xavier26@gmail.com",
+    link: "mailto:xavierssalazar92@gmail.com",
   },
 ];
 

@@ -28,7 +28,6 @@ export const About = () => {
     if (windowWidth >= 320 && windowWidth < 768) {
       return "25%";
     } else if (windowWidth >= 768 && windowWidth < 1024) {
-      console.log("here");
       return "11%";
     } else if (windowWidth >= 1024 && windowWidth < 1440) {
       return "10%";
